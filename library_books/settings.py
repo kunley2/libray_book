@@ -22,7 +22,8 @@ load_dotenv()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING:
+# keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -79,8 +80,12 @@ WSGI_APPLICATION = 'library_books.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbkhdmi9o9u5jh',
+        'USER': 'wiobgqirgjeqnp',
+        'PASSWORD': '6b578aaec3f723db261dc198216c96349617a11b2646cea77c78ca257a5b2e85',
+        'HOST': 'ec2-44-195-186-223.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
